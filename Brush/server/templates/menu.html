@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/menu.css"/>
+    <script type="text/javascript" src="menu.js"></script>
+</head>
+
+<body>
+<div id="menu_frame">
+    <form>
+
+        <p><input type="button" value="upload image" id="bu_photo" /></p>
+        <p><input type="button"  value="take photos" id="bu_takephotos" /></p>
+
+    </form>
+</div>
+<div id="webName">
+    <p id="ourname">
+        OLD SHEN's BRUSH
+    </p>
+</div>
+
+<div id="showCode">
+    <p id="p_showCode_name">code</p>
+    <p id="p_showCode"></p>
+</div>
+<script>
+{#    获取数据并显示在页面上  #}
+{#    利用ajax或者fetch    #}
+    var url = ""; // 请求地址
+    {#var result = fetch(url).then(function (response) {  // 获取数据#}
+    {#    return response.json();#}
+
+   var  result = "hello";
+
+    {#var showDiv = document.createElement("p");#}
+    {#console.log(showDiv);#}
+    {#showDiv.innerHTML = result;#}
+    {#document.body.appendChild(showDiv);#}
+    {#showDiv.classList.add("hello");#}
+    var showCode=document.getElementById('p_showCode');
+    console.log(showCode);
+    showCode.innerText=result;
+
+
+</script>
+</body>
+</html>
