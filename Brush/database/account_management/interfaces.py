@@ -1,4 +1,5 @@
 import os, django
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "server.settings")
 django.setup()
 
@@ -39,7 +40,7 @@ def login(userID, password):
 
 # 接口2：注册 输入：用户名，密码，姓名，邮箱
 # 返回内容包括：注册操作信息状态码，注册操作信息内容，用户名
-def register(userID, password):
+def register(userID, password, email):
     # 在数据库中寻找ID是否重复
     select_result = Account.objects.filter(account_id=userID)
     userID_rt = ''
@@ -50,10 +51,11 @@ def register(userID, password):
         content_rt = 'ID existed!'
     else:
         #注册成功
-        the_model = Account(account_id=userID, account_pass=password)
+        the_model = Account(account_id=userID, account_pass=password, account_email=email)
         the_model.save()
         status = True
         content_rt = "register success!"
+        userID_rt = userID
 
     result_dict = {
         'status': status,
@@ -61,3 +63,4 @@ def register(userID, password):
         'userID': userID_rt,
     }
     return result_dict
+

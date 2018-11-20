@@ -68,7 +68,7 @@ body {
 #showCode{
     width: 600px;
     height: 600px;
-    background-color: #aed581;
+    background-color: #aed581c  ;
    position: absolute;
     left:40%;
     top: 20%;
@@ -86,4 +86,34 @@ body {
     margin-left: 20px;
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Pacifico', cursive;
+}
+.preview_box img {
+  width: 200px;
+}
+
+#img_input{
+  display: none;
+}
+#img_label{
+  font-size: 25px;
+     font-family: 'Architects Daughter', cursive;
+
+    width: 200px;
+    height: 70px;
+    line-height: 28px;
+    text-align: center;
+    opacity: 0.6;
+    color: white;
+    background-color: #ff5722;
+    border-radius: 10px;
+    border: 0;
+     margin-left: 60px;
+    float:left;
+  display: inline-block;
+}
+
+#preview_box img {
+  width: 200px;
+    margin-top: 500px;
+    margin-left: 100px;
 }

@@ -10,4 +10,8 @@ urlpatterns = [
     url(r'^home',views.home),
     url(r'^login',views.login),
     url(r'^menu',views.menu),
+    url(r'^pagereg',views.pageRegister),
+    url(r'^img',views.addWedget),
+    url(r'^code',views.queryPage),
+    url(r'^allPage',views.queryAllPage),
 ]
